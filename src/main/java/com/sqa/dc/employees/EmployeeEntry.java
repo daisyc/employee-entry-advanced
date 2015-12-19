@@ -10,6 +10,7 @@
 
 package com.sqa.dc.employees;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -24,6 +25,7 @@ public class EmployeeEntry {
 
 	private static String[] addresses;
 	private static String[] ages;
+	private static List<Employee> employees;
 	private static String[] jobTitles;
 	private static String[] names;
 	private static String[] newAddresses;
