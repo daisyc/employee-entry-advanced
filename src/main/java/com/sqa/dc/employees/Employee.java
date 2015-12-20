@@ -18,12 +18,7 @@ package com.sqa.dc.employees;
  * @since 1.0
  *
  */
-public class Employee {
-
-	private String address;
-	private String age;
-	private String jobTitle;
-	private String name;
+public class Employee extends AbstractPerson {
 
 	/**
 	 * @param address
@@ -31,72 +26,12 @@ public class Employee {
 	 * @param jobTitle
 	 * @param name
 	 */
-	public Employee(String address, String age, String jobTitle, String name) {
+	public Employee(String name, String address, int age) {
 		super();
-		this.address = address;
-		this.age = age;
-		this.jobTitle = jobTitle;
-		this.name = name;
-	}
+		this.setAddress(address);
+		this.setAge(age);
+		this.setName(name);
 
-	/**
-	 * @return the address
-	 */
-	public String getAddress() {
-		return this.address;
-	}
-
-	/**
-	 * @return the age
-	 */
-	public String getAge() {
-		return this.age;
-	}
-
-	/**
-	 * @return the jobTitle
-	 */
-	public String getJobTitle() {
-		return this.jobTitle;
-	}
-
-	/**
-	 * @return the name
-	 */
-	public String getName() {
-		return this.name;
-	}
-
-	/**
-	 * @param address
-	 *            the address to set
-	 */
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	/**
-	 * @param age
-	 *            the age to set
-	 */
-	public void setAge(String age) {
-		this.age = age;
-	}
-
-	/**
-	 * @param jobTitle
-	 *            the jobTitle to set
-	 */
-	public void setJobTitle(String jobTitle) {
-		this.jobTitle = jobTitle;
-	}
-
-	/**
-	 * @param name
-	 *            the name to set
-	 */
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	/**
@@ -104,8 +39,7 @@ public class Employee {
 	 */
 	@Override
 	public String toString() {
-		return "Employee [address=" + this.address + ", age=" + this.age + ", jobTitle=" + this.jobTitle + ", name="
-				+ this.name + "]";
+		return super.toString() + " They also work for a living.";
 	}
 
 }
